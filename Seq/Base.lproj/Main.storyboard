@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code39-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbi-hw-S5B">
+                                <rect key="frame" x="50" y="80" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-6t-tH0">
+                                <rect key="frame" x="50" y="170" width="275" height="140"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="NJ8-KJ-1O5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v58-cj-4fP">
+                                <rect key="frame" x="152" y="370" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2th-ml-Zd0"/>
+                                    <constraint firstAttribute="width" constant="70" id="ces-8P-SO4"/>
+                                </constraints>
+                                <state key="normal" title="Code39"/>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="oWi-Sj-5Xh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CrM-6t-tH0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="50" id="BBy-kg-jOk"/>
+                            <constraint firstAttribute="trailing" secondItem="CrM-6t-tH0" secondAttribute="trailing" constant="50" id="Kyw-h1-fb8"/>
+                            <constraint firstItem="vbi-hw-S5B" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="50" id="RcP-ul-f1E"/>
+                            <constraint firstItem="v58-cj-4fP" firstAttribute="top" secondItem="CrM-6t-tH0" secondAttribute="bottom" constant="60" id="Tbj-zd-D3n"/>
+                            <constraint firstItem="CrM-6t-tH0" firstAttribute="top" secondItem="vbi-hw-S5B" secondAttribute="bottom" constant="60" id="TmR-e6-HlP"/>
+                            <constraint firstAttribute="trailing" secondItem="vbi-hw-S5B" secondAttribute="trailing" constant="50" id="a34-Uh-Qi4"/>
+                            <constraint firstItem="v58-cj-4fP" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="pSL-bH-d3v"/>
+                            <constraint firstItem="vbi-hw-S5B" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="60" id="yMk-PU-Acn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Code39" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="button" destination="v58-cj-4fP" id="21f-ga-IQ9"/>
+                        <outlet property="imageView" destination="CrM-6t-tH0" id="XEU-6m-3Uy"/>
+                        <outlet property="textField" destination="vbi-hw-S5B" id="HXB-bn-WSw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--QRcode-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OE9-uD-cE4">
+                                <rect key="frame" x="50" y="80" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AGv-yg-56a">
+                                <rect key="frame" x="118" y="170" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="8Ea-7f-Gv1"/>
+                                    <constraint firstAttribute="height" constant="140" id="KMq-ys-m77"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-Er-RfO">
+                                <rect key="frame" x="153" y="370" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6sx-oB-xPu"/>
+                                    <constraint firstAttribute="width" constant="70" id="bLj-HU-1Yp"/>
+                                </constraints>
+                                <state key="normal" title="QR code"/>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="MIk-IL-XVh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fUq-Er-RfO" firstAttribute="top" secondItem="AGv-yg-56a" secondAttribute="bottom" constant="60" id="1Iu-dx-PLL"/>
+                            <constraint firstItem="fUq-Er-RfO" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="2ds-88-2NV"/>
+                            <constraint firstItem="OE9-uD-cE4" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="50" id="PGh-1Q-6ZA"/>
+                            <constraint firstItem="AGv-yg-56a" firstAttribute="top" secondItem="OE9-uD-cE4" secondAttribute="bottom" constant="60" id="Vm3-HB-651"/>
+                            <constraint firstItem="AGv-yg-56a" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="jhc-Cd-IKX"/>
+                            <constraint firstItem="OE9-uD-cE4" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="60" id="sLd-bt-SIq"/>
+                            <constraint firstAttribute="trailing" secondItem="OE9-uD-cE4" secondAttribute="trailing" constant="50" id="v3T-ug-TGb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QRcode" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="button" destination="fUq-Er-RfO" id="uYu-yv-9LY"/>
+                        <outlet property="imageView" destination="AGv-yg-56a" id="ssD-gX-yVo"/>
+                        <outlet property="textField" destination="OE9-uD-cE4" id="f7Y-9f-3UU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
