@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import "Barcode.h"
 
-@interface SecondViewController ()
+@interface SecondViewController ()  <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.textField.delegate = self;
 }
 
 
@@ -34,5 +35,9 @@
     }
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{    
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end

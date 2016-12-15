@@ -9,7 +9,8 @@
 #import "FirstViewController.h"
 #import "Barcode.h"
 
-@interface FirstViewController ()
+@interface FirstViewController () <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *button;
@@ -20,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.textField.delegate = self;
 }
 
 
@@ -31,6 +33,11 @@
     if (![self.textField.text isEqualToString:@""]) {
         self.imageView.image = [Barcode code39ImageFromString:self.textField.text imageViewSize:self.imageView.frame.size];
     } 
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
